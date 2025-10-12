@@ -1,0 +1,9 @@
+CREATE TABLE Tela
+(
+	TelaId TINYINT IDENTITY(1,1) NOT NULL PRIMARY KEY CLUSTERED,
+	Descricao NVARCHAR(255) NOT NULL UNIQUE,
+	Status VARCHAR(50) NOT NULL DEFAULT 'Ativo',
+	DataCadastro DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME(),
+)
+
+-- Índice para consultas por Descricao (já coberto pelo UNIQUE)
